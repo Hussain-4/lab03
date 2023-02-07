@@ -2,7 +2,8 @@ import java.util.Arrays;
 
 public class Sorter {
     public static void main(String[] args) {
-
+        int[] arr = {1,5,3,8,6,2};
+        selectionSort(arr);
     }
     public static void selectionSort(int[] arr){
         for (int i = 0; i < arr.length - 1; i++)
@@ -13,18 +14,11 @@ public class Sorter {
                     index = j;//searching for lowest index
                 }
             }
-            arr[j + 1] = key;
+            int smallerNumber = arr[index];
+            arr[index] = arr[i];
+            arr[i] = smallerNumber;
         }
         System.out.println(Arrays.toString(arr));
-    }
-
-    /* A utility function to print array of size n */
-    static void printArray(int arr[]) {
-        int n = arr.length;
-        for (int i = 0; i < n; ++i)
-            System.out.print(arr[i] + " ");
-
-        System.out.println();
     }
 
 };
