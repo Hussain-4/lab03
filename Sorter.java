@@ -21,7 +21,7 @@ public class Sorter {
         System.out.println(Arrays.toString(arr));
     }
 
-    void sort(int arr[]) {
+    void sort1(int arr[]) {
         int n = arr.length;
         for (int i = 1; i < n; ++i) {
             int key = arr[i];
@@ -39,5 +39,8 @@ public class Sorter {
             arr[j + 1] = key;
         }
     }
+    public void sort(int[] arr){
+        selectionSort(arr);
+    }
 
-};
+}
