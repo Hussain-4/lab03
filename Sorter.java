@@ -1,6 +1,9 @@
+import java.util.Arrays;
+
 public class Sorter {
     public static void main(String[] args) {
-
+        int[] arr = {1,5,3,8,6,2};
+        selectionSort(arr);
     }
     public static void selectionSort(int[] arr){
         for (int i = 0; i < arr.length - 1; i++)
@@ -15,5 +18,6 @@ public class Sorter {
             arr[index] = arr[i];
             arr[i] = smallerNumber;
         }
+        System.out.println(Arrays.toString(arr));
     }
 }
